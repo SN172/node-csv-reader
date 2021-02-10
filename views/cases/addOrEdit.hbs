@@ -1,0 +1,33 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/cases" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{cases._id}}">
+    <div class="form-group">
+        <label>ID</label>
+        <input type="text" class="form-control" name="id" placeholder="ID" value="{{cases.id}}">
+    </div>
+    <div class="form-group">
+        <label>Date</label>
+        <input type="date" class="form-control" name="date" placeholder="date" value="{{cases.date}}">
+    </div>
+    <div class="form-group">
+        <label>Cases</label>
+        <input type="number" class="form-control" name="cases" placeholder="cases" value="{{cases.cases}}">
+    </div>
+    <div class="form-group">
+        <label>Deaths</label>
+        <input type="number" class="form-control" name="deaths" placeholder="deaths" value="{{cases.deaths}}">
+    </div>
+    <div class="form-group">
+        <label>Name_FR</label>
+        <input type="text" class="form-control" name="name_fr" placeholder="name_fr" value="{{cases.name_fr}}">
+    </div>
+    <div class="form-group">
+        <label>Name_EN</label>
+        <input type="text" class="form-control" name="name_en" placeholder="name_en" value="{{cases.name_en}}">
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/cases/list"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>

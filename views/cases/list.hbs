@@ -1,0 +1,36 @@
+
+
+<h3><a class="btn btn-secondary" href="/cases"><i class="fa fa-plus"></i> Create New</a> Cases List By Sajeel Nazir</h3>
+<form method="POST" action="/" enctype="multipart/form-data">
+  <input type="file" id="myFile" name="file">
+  <input class="btn btn-secondary" type="submit" value="Upload">
+</form>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Date</th>
+            <th>Cases</th>
+            <th>Deaths</th>
+            <th>Name_FR</th>
+            <th>Name_EN</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.id}}</td>
+            <td>{{this.date}}</td>
+            <td>{{this.cases}}</td>
+            <td>{{this.deaths}}</td>
+            <td>{{this.name_fr}}</td>
+            <td>{{this.name_en}}</td>
+            <td>
+                <a href="/cases/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/cases/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
